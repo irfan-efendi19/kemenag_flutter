@@ -2,14 +2,9 @@ import 'package:aplikasi_haji/kartulayanan/layanan_1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +37,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         backgroundColor: Color(0xFF2ED573),
-        body: SafeArea(
+        //area scroll view
+        body: SingleChildScrollView(
           child: Column(children: [
             SizedBox(height: 25),
             //appbar

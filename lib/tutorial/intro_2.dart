@@ -12,8 +12,8 @@ class intro_2 extends StatelessWidget {
         children: [
           Container(
             child: Image.asset('assets/logohalal.png'),
-            height: 400,
-            width: 500,
+            height: MediaQuery.of(context).size.height * 0.5,
+            width: MediaQuery.of(context).size.width * 0.9,
           ),
           Text('Cek Daftar Produk Halal\nYang Terdaftar KEMENAG',
               textAlign: TextAlign.center,

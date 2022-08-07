@@ -3,26 +3,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:aplikasi_haji/tutor.dart';
 
-class splashscreen extends StatefulWidget {
-  const splashscreen({Key? key}) : super(key: key);
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  State<splashscreen> createState() => _splashscreenState();
-}
-
-class _splashscreenState extends State<splashscreen> {
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
+  Widget build(BuildContext context) {
     Timer(Duration(seconds: 5), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Tutorial()));
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       child: Column(
@@ -30,8 +19,8 @@ class _splashscreenState extends State<splashscreen> {
         children: [
           Container(
             child: Image.asset('assets/kemenag.png'),
-            height: 200,
-            width: 200,
+            height: MediaQuery.of(context).size.height * 0.5,
+            width: MediaQuery.of(context).size.width * 0.5,
           ),
         ],
       ),

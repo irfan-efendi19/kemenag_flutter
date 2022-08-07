@@ -12,10 +12,10 @@ class intro_3 extends StatelessWidget {
         children: [
           Container(
             child: Image.asset('assets/t_infor.png'),
-            height: 300,
-            width: 300,
+            height: MediaQuery.of(context).size.height * 0.5,
+            width: MediaQuery.of(context).size.width * 0.5,
           ),
-          SizedBox(height: 100),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           Text(
             'Update Informasi Publik',
             textAlign: TextAlign.center,
