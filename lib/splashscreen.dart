@@ -1,5 +1,6 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
 import 'package:aplikasi_haji/tutor.dart';
 
 class splashscreen extends StatefulWidget {
@@ -11,13 +12,29 @@ class splashscreen extends StatefulWidget {
 
 class _splashscreenState extends State<splashscreen> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => Tutorial()));
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SplashScreen(
-      seconds: 5,
-      navigateAfterSeconds: Tutorial(),
-      backgroundColor: Colors.white,
-      image: Image.asset('assets/splash.png'),
-      photoSize: 100.0,
+    return Container(
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            child: Image.asset('assets/kemenag.png'),
+            height: 200,
+            width: 200,
+          ),
+        ],
+      ),
     );
   }
 }

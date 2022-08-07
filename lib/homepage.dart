@@ -1,6 +1,5 @@
 import 'package:aplikasi_haji/kartulayanan/layanan_1.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatefulWidget {
